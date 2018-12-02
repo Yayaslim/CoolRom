@@ -5,10 +5,21 @@
  */
 package AccueilView;
 
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
 /**
  *
  * @author slima
  */
 public class AccueilView {
+    private final Scene scene;
+    private final BorderPane root;
     
+    public AccueilView(Stage primaryStage){
+    root = new BorderPane();
+    scene = new Scene(root,350,100);
+    primaryStage.setScene(scene);
+    }
 }
