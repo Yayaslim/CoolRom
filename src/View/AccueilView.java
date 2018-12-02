@@ -8,6 +8,8 @@ package View;
 
 
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -18,10 +20,10 @@ import javafx.stage.Stage;
 public class AccueilView {
     private final Scene scene;
     private final BorderPane root;
-    
+
     public AccueilView(Stage primaryStage){
     root = new BorderPane();
-    scene = new Scene(root,350,100);
+    scene = new Scene(root,500,500);
     primaryStage.setScene(scene);
     }
 }

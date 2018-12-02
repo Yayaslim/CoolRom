@@ -9,7 +9,7 @@ package coolrom;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import AccueilView.AccueilView;
+import View.AccueilView;
 
 /**
  *
