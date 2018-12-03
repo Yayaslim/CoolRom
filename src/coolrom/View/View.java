@@ -99,13 +99,16 @@ public class View {
     
     vbox1.setMargin(hbox, new Insets(20, 20, 20, 20));
     primaryStage.setMaximized(true);
+    
     scene = new Scene(root);
+    
     primaryStage.setScene(scene);
 }
 
     public BorderPane getroot() {
         return root;
     }
-
+    
+    
     
 }

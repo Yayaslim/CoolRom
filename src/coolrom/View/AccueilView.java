@@ -15,6 +15,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
@@ -26,13 +27,14 @@ public class AccueilView extends View{
     private final VBox vbox2;
     private final GridPane gridpane;
     private final TextField textField;
-    
+    private static Label label = new Label("Rechercher un jeu");
     public AccueilView(Stage primaryStage){
    super(primaryStage);
     
     vbox2 = new VBox();
     
-    Label label = new Label("Rechercher un jeu");
+    
+    label.setFont(new Font(48));
     vbox2.setAlignment(Pos.BASELINE_CENTER);
     gridpane = new GridPane();
     
@@ -49,5 +51,9 @@ public class AccueilView extends View{
     vbox2.setPadding(new Insets(150,350,0,350));
     super.root.setCenter(vbox2);
  
+    }
+    
+    public static Label getlabel(){
+        return label;
     }
 }
