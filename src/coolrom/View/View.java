@@ -36,7 +36,6 @@ public class View {
     private final Button modenuit;
     private final MenuButton menulangue;
     private final VBox vbox1;
-    private final Label labelAccueil;
     
     public View(Stage primaryStage){
     root = new BorderPane();
@@ -55,16 +54,44 @@ public class View {
     MenuItem menuItem2 = new MenuItem("Vietnamien");
     MenuItem menuItem3 = new MenuItem("Arabe");
     menulangue = new MenuButton("Langue", null, menuItem1, menuItem2, menuItem3);
-    MenuBar menuBar = new MenuBar();
+    
+    
     hbox.getChildren().addAll(logo,region1,modenuit,menulangue);
     hbox.setMargin(modenuit, new Insets(0,50,0,0));
     
-    labelAccueil = new Label("Accueil");
+    MenuBar menuBar = new MenuBar();
+    
+    Label labelAccueil = new Label("Accueil");
     labelAccueil.setOnMousePressed(new Quitter(this));
+    
+    Label labelFAQ = new Label("FAQ");
+    labelFAQ.setOnMousePressed(new Quitter(this));
+    
+    Label labelNews = new Label("News");
+    labelNews.setOnMousePressed(new Quitter(this));
+    
+    Label labelTutoriel = new Label("Tutoriel");
+    labelTutoriel.setOnMousePressed(new Quitter(this));
+    
+    Label labelEmulateurs = new Label("Emulateurs");
+    labelEmulateurs.setOnMousePressed(new Quitter(this));
+    
+    Label labelROM = new Label("ROM");
+    labelROM.setOnMousePressed(new Quitter(this));
     
     Menu menuAccueil = new Menu();
     menuAccueil.setGraphic(labelAccueil);
-    menuBar.getMenus().add(menuAccueil);
+    Menu menuFAQ = new Menu();
+    menuFAQ.setGraphic(labelFAQ);
+    Menu menuNews = new Menu();
+    menuNews.setGraphic(labelNews);
+    Menu menuTutoriel = new Menu();
+    menuTutoriel.setGraphic(labelTutoriel);
+    Menu menuEmulateurs = new Menu();
+    menuEmulateurs.setGraphic(labelEmulateurs);
+    Menu menuROM = new Menu();
+    menuROM.setGraphic(labelROM);
+    menuBar.getMenus().addAll(menuAccueil, menuFAQ, menuNews, menuTutoriel, menuEmulateurs, menuROM);
     
     vbox1.setSpacing(25);
     vbox1.getChildren().addAll(hbox,menuBar);
