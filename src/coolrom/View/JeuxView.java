@@ -1,5 +1,6 @@
-package View;
+package coolrom.View;
 
+import coolrom.View.View;
 import javafx.stage.Stage;
 
 /*

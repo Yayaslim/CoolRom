@@ -1,3 +1,4 @@
+
 package coolrom;
 
 /*
@@ -9,13 +10,13 @@ package coolrom;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import View.AccueilView;
+import coolrom.View.AccueilView;
 
 /**
  *
  * @author slima
  */
-public class CoolRom extends Application {
+public class main extends Application {
     
     @Override
     public void start(Stage primaryStage) {

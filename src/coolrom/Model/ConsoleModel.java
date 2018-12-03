@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package coolrom.Model;
 
+import coolrom.Model.EmulateurModel;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 

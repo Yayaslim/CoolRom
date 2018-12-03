@@ -1,8 +1,8 @@
-package Controller;
+package coolrom.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import View.View;
+import coolrom.View.View;
 import javafx.scene.control.Button;
 /*
  * To change this license header, choose License Headers in Project Properties.
