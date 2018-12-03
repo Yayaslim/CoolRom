@@ -21,6 +21,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
@@ -63,22 +64,33 @@ public class View {
     
     Label labelAccueil = new Label("Accueil");
     labelAccueil.setOnMousePressed(new Quitter(this));
+    labelAccueil.setFont(new Font(24));
+    labelAccueil.setPadding(new Insets (0, 20, 0 ,0));
     
     Label labelFAQ = new Label("FAQ");
     labelFAQ.setOnMousePressed(new Quitter(this));
+    labelFAQ.setFont(new Font(24));
+    labelFAQ.setPadding(new Insets (0, 20, 0 ,0));
     
     Label labelNews = new Label("News");
     labelNews.setOnMousePressed(new Quitter(this));
+    labelNews.setFont(new Font(24));
+    labelNews.setPadding(new Insets (0, 20, 0 ,0));
     
     Label labelTutoriel = new Label("Tutoriel");
     labelTutoriel.setOnMousePressed(new Quitter(this));
+    labelTutoriel.setFont(new Font(24));
+    labelTutoriel.setPadding(new Insets (0, 20, 0 ,0));
     
     Label labelEmulateurs = new Label("Emulateurs");
     labelEmulateurs.setOnMousePressed(new Quitter(this));
+    labelEmulateurs.setFont(new Font(24));
+    labelEmulateurs.setPadding(new Insets (0, 20, 0 ,0));
     
     Label labelROM = new Label("ROM");
     labelROM.setOnMousePressed(new Quitter(this));
-    
+    labelROM.setFont(new Font(24));
+    labelROM.setPadding(new Insets (0, 20, 0 ,0));
     Menu menuAccueil = new Menu();
     menuAccueil.setGraphic(labelAccueil);
     Menu menuFAQ = new Menu();
