@@ -20,6 +20,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import Controller.ChangerMode;
 
 /**
  *
@@ -45,6 +46,7 @@ public class View {
     logo = new ImageView();
     logo.setImage(image);
     modenuit = new Button("Mode nuit");
+    modenuit.setOnAction(new ChangerMode(this));
     
     Region region1= new Region();
     HBox.setHgrow(region1, Priority.ALWAYS);
@@ -76,4 +78,9 @@ public class View {
     primaryStage.setScene(scene);
 }
 
+    public BorderPane getroot() {
+        return root;
+    }
+
+    
 }
