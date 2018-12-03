@@ -23,6 +23,7 @@ public class ChangerMode implements EventHandler<ActionEvent> {
         this.view = view ;
     }
     
+    
     @Override
     public void handle(ActionEvent event) {
     Button temp = (Button) event.getTarget();
@@ -38,4 +39,5 @@ public class ChangerMode implements EventHandler<ActionEvent> {
 
     
     }
+    
 }

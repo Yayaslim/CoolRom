@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package coolrom.View;
-
+import coolrom.Controller.Quitter;
 import coolrom.Controller.ChangerMode;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuButton;
@@ -34,8 +35,8 @@ public class View {
     private final HBox hbox;
     private final Button modenuit;
     private final MenuButton menulangue;
-    private final MenuBar menuBar;
     private final VBox vbox1;
+    private final Label labelAccueil;
     
     public View(Stage primaryStage){
     root = new BorderPane();
@@ -54,24 +55,21 @@ public class View {
     MenuItem menuItem2 = new MenuItem("Vietnamien");
     MenuItem menuItem3 = new MenuItem("Arabe");
     menulangue = new MenuButton("Langue", null, menuItem1, menuItem2, menuItem3);
-    
+    MenuBar menuBar = new MenuBar();
     hbox.getChildren().addAll(logo,region1,modenuit,menulangue);
     hbox.setMargin(modenuit, new Insets(0,50,0,0));
     
-    menuBar = new MenuBar();
+    labelAccueil = new Label("Accueil");
+    labelAccueil.setOnMousePressed(new Quitter(this));
     
-    Menu fileAccueil = new Menu("Accueil");
-    Menu fileFAQ = new Menu("FAQ");
-    Menu fileNews = new Menu("News");
-    Menu fileTutoriel = new Menu("Tutoriel");
-    Menu fileEmulateurs = new Menu("Emulateurs");
-    Menu fileROM = new Menu("ROM");
+    Menu menuAccueil = new Menu();
+    menuAccueil.setGraphic(labelAccueil);
+    menuBar.getMenus().add(menuAccueil);
     
-    menuBar.getMenus().addAll(fileAccueil, fileFAQ, fileNews,fileTutoriel,fileEmulateurs,fileROM);
     vbox1.setSpacing(25);
     vbox1.getChildren().addAll(hbox,menuBar);
-    root.setTop(vbox1);
-
+    root.setTop(vbox1);;
+    
     vbox1.setMargin(hbox, new Insets(20, 20, 20, 20));
     primaryStage.setMaximized(true);
     scene = new Scene(root);
