@@ -17,6 +17,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,6 +25,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -32,8 +34,11 @@ import javafx.stage.Stage;
  */
 public class AccueilView extends View{
     private final VBox vbox2;
+    private final VBox vbox3;
     private final TextField textField;
+    private final Text article = new Text("Blablabla il s'agit d'un article");
     private static Label label = new Label("Rechercher un jeu");
+    private static Label label2 = new Label("Dernières News");
     private final HBox barrederecherche;
     private static final MenuItem menuItem1 = new MenuItem("Gameboy Advance");
     private static final MenuItem menuItem2 = new MenuItem("Gamecube");
@@ -82,9 +87,18 @@ public class AccueilView extends View{
     vbox2.setAlignment(Pos.BASELINE_CENTER);
     vbox2.getChildren().addAll(label, barrederecherche);
     vbox2.setPadding(new Insets(150,350,0,350));
+    
+    vbox3 = new VBox();
+    label2.setFont(new Font(32));
+    vbox3.setAlignment(Pos.BASELINE_CENTER);
+    vbox3.getChildren().addAll(label2, article);
+    vbox3.setStyle("-fx-border-color: black;");
+    vbox3.setMargin(article, new Insets(150,350,200,350));
+
     super.root.setCenter(vbox2);
- 
+    super.root.setBottom(vbox3);    
     }
+   
     
     public static Label getlabel(){
         return label;

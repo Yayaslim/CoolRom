@@ -11,7 +11,6 @@ package coolrom;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import coolrom.View.AccueilView;
-import coolrom.View.JeuxView;
 
 /**
  *
@@ -24,11 +23,6 @@ public class main extends Application {
         primaryStage.setTitle("CoolRom");
         new AccueilView(primaryStage);
         primaryStage.show();
-        
-        Stage secondstage = new Stage();
-        secondstage.setTitle("CoolRom");
-        new JeuxView(secondstage);
-        secondstage.show();
     }
 
     /**
