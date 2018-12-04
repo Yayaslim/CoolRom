@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package coolrom.View;
+import coolrom.Controller.ChangerLangue;
 import coolrom.Controller.Quitter;
 import coolrom.Controller.ChangerMode;
 import javafx.geometry.Insets;
@@ -55,7 +56,7 @@ public class View {
     MenuItem menuItem2 = new MenuItem("Vietnamien");
     MenuItem menuItem3 = new MenuItem("Arabe");
     menulangue = new MenuButton("Langue", null, menuItem1, menuItem2, menuItem3);
-    
+    menuItem3.setOnAction(new ChangerLangue(this));
     
     hbox.getChildren().addAll(logo,region1,modenuit,menulangue);
     hbox.setMargin(modenuit, new Insets(0,50,0,0));
